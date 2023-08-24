@@ -1,6 +1,4 @@
 import { ClerkProvider } from '@clerk/nextjs/app-beta'
-
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
