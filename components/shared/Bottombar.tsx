@@ -18,10 +18,11 @@ const Bottombar = () => {
             (pathname.includes(link.route) && link.route.length > 1) ||
             pathname === link.route;
           return (
-            <Link href={link.route} className={`bottombar_link  ${isActive && "bg-primary-500"}`}>
+            <Link href={link.route} key={link.label} className={`bottombar_link  ${isActive && "bg-primary-500"}`}>
               <Image
                 src={link.imgURL}
                 alt={link.label}
+                key={link.label}
                 width={24}
                 height={24}
               />

@@ -2,7 +2,7 @@ import AccountProfile from "@/components/form/AccountProfile"
 import { currentUser } from "@clerk/nextjs"
 async function page() {
     const user = await currentUser()
-
+ console.log(user)
     const userInfo = {}
     const userData = {
         id: user?.id,
@@ -10,7 +10,7 @@ async function page() {
         userName: userInfo?.userName || user?.username,
         name: userInfo?.name || user?.firstName || '',
         bio: userInfo?.bio || '',
-        image: userInfo?.image || user?.imageUrl,
+        image: userInfo?.imageUrl || user?.profileImageUrl,
     }
     return(
         <main className="mx-auto flex max-w-3xl flex-col justify-start px-10 py-20">
